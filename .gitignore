@@ -1,0 +1,6 @@
+aseprite_ssd1306
+*.swp
+*.swo
+*.dSYM
+*.pdb
+*.exe

@@ -2,6 +2,8 @@
 #include <windows.h>
 #define NL "\r\n"
 
+//unity build
+#include "3rdparty/miniz.c"
 #include "aseprite_ssd1306.c"
 
 #define PRINTERRNO_EXIT(err_no, fmt, ...) do {\
@@ -49,6 +51,7 @@ int wmain(int argc, wchar_t **argv) {
     ProgramArgs pa = parse_args(argc, argv);
 
 	if (!pa.is_valid) {
+		PRINTERR("Aseprite-SSD1306 Utility " ASEPRITE_SSD1306_VERSION);
 		PRINTERR("Usage %ls [-pv] aseprite_file", argv[0]);
 		return 1;
 	}

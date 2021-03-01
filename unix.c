@@ -2,6 +2,8 @@
 #include <sys/mman.h>
 #define NL "\n"
 
+//unity build
+#include "3rdparty/miniz.c"
 #include "aseprite_ssd1306.c"
 
 static ProgramArgs parse_args(int argc, char **argv) {
@@ -42,6 +44,7 @@ int main(int argc, char **argv) {
     ProgramArgs pa = parse_args(argc, argv);
 
 	if (!pa.is_valid) {
+		PRINTERR("Aseprite-SSD1306 Utility " ASEPRITE_SSD1306_VERSION);
 		PRINTERR("Usage %s [-pv] aseprite_file", argv[0]);
 		return 1;
 	}

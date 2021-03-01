@@ -8,9 +8,7 @@
 #include <string.h>
 
 #include <stdbool.h>
-
-//unity build
-#include "3rdparty/miniz.c"
+#include "3rdparty/miniz.h"
 
 typedef uint8_t u8;
 typedef uint16_t u16;
@@ -23,6 +21,7 @@ typedef int64_t i64;
 typedef size_t usize;
 typedef ptrdiff_t isize;
 
+#define ASEPRITE_SSD1306_VERSION "0.0.1"
 #define GB(n) (n*MB(1024))
 #define MB(n) (n*KB(1024))
 #define KB(n) (n*1024)
